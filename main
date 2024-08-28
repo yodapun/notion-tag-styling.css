@@ -1,0 +1,33 @@
+/* Target individual tags inside the multi-select property */
+.notion-collection-card__property:last-child .notion-select,
+.notion-collection-list__item-property:last-child .notion-select {
+    display: inline-block; /* Ensures each tag is treated as a separate block */
+    background: none!important;
+    border-radius: 0px!important;
+    color: var(--color-text-default)!important;
+    font-weight: 300!important;
+    opacity: 1!important;
+    position: static!important;
+    width: auto!important;
+    height: auto!important;
+    transition: none!important;
+    padding: 0px!important;
+    margin: 4px 8px 4px 0px!important; /* Adds margin between tags */
+    justify-content: flex-start!important;
+}
+
+/* Remove background on hover */
+.notion-collection-card:hover .notion-collection-card__property:last-child .notion-select,
+.notion-collection-list__item:hover .notion-collection-list__item-property:last-child .notion-select {
+    background: transparent!important;
+}
+
+/* Ensure individual tags wrap properly */
+.notion-collection-card__property:last-child, 
+.notion-collection-list__item-property:last-child {
+    display: flex!important; /* Use flexbox to handle wrapping */
+    flex-wrap: wrap!important; /* Ensure tags wrap to the next line when needed */
+    gap: 4px; /* Add gap between the tags for better spacing */
+    padding: 0px!important;
+    justify-content: flex-start!important;
+}
